@@ -13,9 +13,6 @@ a {
   color: #cac8c8;
 }
 
-a.logo {
-  height: 44px;
-}
 
 .inner {
   max-width: 1000px;
@@ -23,8 +20,9 @@ a.logo {
   margin: 0 auto;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  /* transition: height 1s; */
 }
 
 header {
@@ -36,50 +34,68 @@ header {
   z-index: 9;
 }
 
-header .inner .logo img {
+header .inner {
+  display: flex;
+  justify-content: center;
+}
+
+header.inner a.logo {
+  height: 44px;
+}
+
+header .inner > .logo img {
   height: 100%;
 }
 
 header .main-menu .menu {
   display: flex;
   padding: 0 15px;
+  height: 44px;
 }
 
 header .main-menu .menu .item {
   margin: 0 15px;
 }
 
-header .main-menu .menu .item:hover .item__name {
-  color: #fff
-}
 
-header .main-menu .menu .item:hover .item__contents  {
-  display: block;
-  background-color: #161617;
+header .main-menu .menu .item {
+  position: relative;
   transition: height 1s;
 }
 
-header .main-menu .menu .item:hover header {
-  background-color: #161617;
-}
-
-
-header .main-menu .item {
-  position: relative;
-}
-
-header .main-menu .item .item__name {
+header .main-menu .menu .item .item__name {
   line-height: 44px;
   text-align: center;
   left: 0;
 }
 
+header .main-menu .menu .item:hover .item__name {
+  color: #fff
+}
+
+header .main-menu .menu .item .item__name .material-icons {
+  text-align: center;
+  line-height: 44px;
+}
+
 header .main-menu .menu .item .item__contents {
   width: 100%;
-  height: 500px;
+  height: 0px;
   position: fixed;
   left: 0;
-  display: none;
+  visibility: hidden;
+  /* display: none; */
+  transition: height .4s, opacity .4s;
+  opacity: 0;
+}
+
+header .main-menu .menu .item:hover .item__contents  {
+  /* display: block; */
+  height: 500px;
+  background-color: #161617;
+  visibility: visible;
+  /* transition: opacity .4s .4s; */
+  opacity: 1;
 }
 
 header .main-menu .menu .item__contents .contents__menu .inner {
@@ -95,6 +111,7 @@ header .main-menu .menu .item__contents .contents__menu .inner > li ul li {
   font-weight: 600;
   cursor: pointer;
 }
+
 
 header .main-menu .menu .item__contents .contents__menu h4 {
   font-size: 12px;
@@ -112,24 +129,35 @@ header .main-menu .menu .item__contents .contents__menu .first_contents__menu p 
   font-weight: 700;
 }
 
-header .search {
-  position: relative;
-  height: 34px;
+header .main-menu .menu .item__contents .contents__menu .first_contents__menu inner.shop {
+  display: flex;
+  
 }
 
-header .search input {
-  width: 36px;
-  height: 34px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  box-sizing: border-box;
-  outline: none;
-  /* background-color: transparent; */
+
+/* header .search .search-menu .search__contents {
+  height: 500px;
 }
 
-header .search span {
+/* header .inner .search {
+  background-color: #6e6e73;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  transition: .5s;
+} */
+
+header .inner .search > a {
+  background-color: #161617;
+  display: block;
   position: absolute;
-  top: 8px;
-  bottom: 0;
-  right: 3px;
+  height: 100px;
 }
+
+/* header .inner .search.active {
+  height: 350px;
+  visibility: visible;
+} */
