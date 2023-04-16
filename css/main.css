@@ -45,7 +45,7 @@ header {
 }
 
 .product_link {
-  margin-top: 15px;
+  margin-top: 15px; 
 }
 
 .product_link a {
@@ -57,6 +57,7 @@ header {
 header .inner {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 header.inner a.logo {
@@ -64,7 +65,10 @@ header.inner a.logo {
 }
 
 header .inner > .logo img {
+  padding-top: 5px;
   height: 100%;
+  filter: invert(88%) sepia(13%) saturate(31%) hue-rotate(107deg) brightness(96%) contrast(79%);;
+  box-sizing: border-box;
 }
 
 header .main-menu .menu {
@@ -85,8 +89,8 @@ header .main-menu .menu .item {
 
 header .main-menu .menu .item .item__name {
   line-height: 44px;
-  text-align: center;
-  left: 0;
+  /* text-align: center; */
+  /* left: 0; */
 }
 
 header .main-menu .menu .item:hover .item__name {
@@ -95,8 +99,10 @@ header .main-menu .menu .item:hover .item__name {
 
 header .main-menu .menu .item .item__name .material-icons {
   text-align: center;
-  line-height: 44px;
+  line-height: 45px;
   font-size: 19px;
+  /* padding-top: 12px; */
+  box-sizing: border-box;
 }
 
 header .main-menu .menu .item .item__contents {
@@ -224,7 +230,7 @@ header .main-menu .menu .item__contents .contents__menu .inner.shop  li > ul li 
 }
 
 .section-content .inner > span.one {
-  font-size: 5px;
+  font-size: 20px;
   /* position: absolute; */
   right: 137px;
   bottom: 21px;
@@ -241,14 +247,20 @@ header .main-menu .menu .item__contents .contents__menu .inner.shop  li > ul li 
   font-size: 19px;
 }
 
+/* 상품 소개 페이지 (1장) */
 .sales_presentation_one {
-  height: 580px;
+  height: 600px;
   max-width: 2560px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
-
-.sales_presentation_one .inner .copyright .product_link a {
-  margin-left: 35px;
+.sales_presentation_one .inner .copyright .product_link a + a {
+  margin-left: 45px;
+  text-align: center;
+}
+.sales_presentation_one .inner .copyright .product_link a span {
+  /* height: 100%; */
+  position: absolute;
 }
 
 .sales_presentation_one.phone-pro {
@@ -262,9 +274,14 @@ header .main-menu .menu .item__contents .contents__menu .inner.shop  li > ul li 
   width: 100%;
   height: 100%;
   text-align: center;
-  position: absolute;
+  /* position: absolute;
   top: 47px;
-  bottom: 0;
+  bottom: 0; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 70px;
+  padding-top: 70px;
 }
 .sales_presentation_one.phone-pro .inner .copyright h2 {
   font-size: 56px;
@@ -276,16 +293,260 @@ header .main-menu .menu .item__contents .contents__menu .inner.shop  li > ul li 
   font-weight: 400;
   letter-spacing: -3px;
 }
-
+/* .sales_presentation_one.phone-pro .inner .copyright .product_link {
+  position: absolute;
+  left: 392px;
+} */
 .sales_presentation_one.phone-pro .inner .copyright .hover.one:hover {
   text-decoration: underline;
 }
 
 .sales_presentation_one.phone {
-  background-color: burlywood;
-  /* background-image: url("../images/sales_presentation_one-phone.jpg"); */
-  
+  /* background-color: burlywood; */
+  background-image: url("../images/sales_presentation_one-phone.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 680px;
 }
+.sales_presentation_one.phone .inner .copyright {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* position: absolute;
+  top: 44px;
+  bottom: 0; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 60px;
+}
+.sales_presentation_one.phone .inner .copyright h2 {
+  color: #1d1d1f;
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+.sales_presentation_one.phone .inner .copyright h3 {
+  color: #1d1d1f;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+/* .sales_presentation_one.phone .inner .copyright .product_link {
+  position: absolute;
+  left: 392px;
+} */
+
 .sales_presentation_one.watch {
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
+  background-image: url("../images/sales_presentation_one-watch.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 680px;
+}
+.sales_presentation_one.watch .inner .copyright {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 70px;
+  padding-top: 70px;
+  /* position: absolute;
+  top: 44px;
+  bottom: 0; */
+}
+.sales_presentation_one.watch .inner .copyright h2 {
+  color: #1d1d1f;
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+.sales_presentation_one.watch .inner .copyright h3 {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+/* .sales_presentation_one.watch .inner .copyright .product_link {
+  position: absolute;
+  left: 391px;
+} */
+
+/* today_color */
+.today_color {
+  background-color: #f8e475;
+  position: relative;
+}
+.today_color .inner{
+  /* background-color: cadetblue; */
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid #0066cc; */
+}
+.today_color .inner h2 {
+  color: #161617;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.today_color .inner .swiper {
+  /* background-color: wheat; */
+  width: 20px;
+  height: 55px;
+  flex-grow: 1;
+}
+.today_color .inner .swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  margin: 0 20px;
+}
+.today_color .inner .swiper .swiper-slide a {
+  color: #1d1d1f;
+  font-size: 20px;
+  font-weight: 600;
+}
+.today_color .inner a > .material-icons {
+  color: #161617;
+  font-size: 32px;
+}
+
+/* 상품 소개 페이지 (2장) */
+
+.sales_presentation_two {
+  height: 600px;
+  max-width: 2560px;
+  margin: 0 auto;
+  /* background-color: #2997ff; */
+  display: flex;
+  position: relative;
+}
+.sales_presentation_two > div{
+  margin: 10px 10px 0;
+}
+.sales_presentation_two > div .copyright {
+  font-size: 21px;
+  letter-spacing: -2px;
+}
+.sales_presentation_two > div .copyright h2 { 
+  font-size: 40px;
+  font-weight: 600;
+}
+.sales_presentation_two > div .copyright h3 {
+  font: 21px;
+}
+.sales_presentation_two > div .copyright .product_link a {
+  font-size: 17px;
+}
+.sales_presentation_two > div .copyright .product_link span {
+  font-size: 18px;
+}
+
+.sales_presentation_two .wwdc23 {
+  /* background-color: rosybrown; */
+  height: 590px;
+  width: 50%;
+  background-image: url("../images/sales_presentation_two-wwdc23.jpg");
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* box-sizing: border-box; */
+}
+.sales_presentation_two .wwdc23 .copyright {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.sales_presentation_two .ipad {
+  /* background-color: violet; */
+  height: 590px;
+  width: 50%;
+  max-width: 1280px;
+  background-image: url("../images/sales_presentation_two-ipad.jpg");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* box-sizing: border-box; */
+}
+.sales_presentation_two .ipad .copyright {
+  color: #1d1d1f;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.sales_presentation_two .macbook_pro {
+  background-color: wheat;
+  height: 590px;
+  width: 50%;
+  background-image: url("../images/sales_presentation_two-macbook_pro.jpg");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.sales_presentation_two .macbook_pro .copyright {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.sales_presentation_two .airpods_pro {
+  background-color: wheat;
+  height: 590px;
+  width: 50%;
+  background-image: url("../images/sales_presentation_two-airpods_pro.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.sales_presentation_two .airpods_pro .copyright {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.sales_presentation_two .airpods_pro .copyright a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.sales_presentation_two .imac {
+  /* background-color: violet; */
+  height: 590px;
+  width: 50%;
+  max-width: 1280px;
+  background-image: url("../images/sales_presentation_two-imac.jpg");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* box-sizing: border-box; */
+}
+.sales_presentation_two .imac .copyright {
+  color: #1d1d1f;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.sales_presentation_two .macbook_air {
+  /* background-color: violet; */
+  height: 590px;
+  width: 50%;
+  max-width: 1280px;
+  background-image: url("../images/sales_presentation_two-macbook_air.png");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* box-sizing: border-box; */
+}
+.sales_presentation_two .macbook_air .copyright {
+  color: #1d1d1f;
+  margin-top: 20px;
+  padding-top: 20px;
 }

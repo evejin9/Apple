@@ -24,8 +24,13 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
   <link rel="stylesheet" href="./css/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
   <script defer src="./js/main.js"></script>
 </head>
@@ -474,16 +479,17 @@
           </li>
         </ul>
       </div>
-    </div>>
+    </div>
   </header>
   <!-- 메인 -->
   <section class="section-content">
     <div class="inner">
       <span> iPhone 7 Plus 이후 모델을 보상 판매하면 iPhone 14 또는 iPhone 14 pro 구입 시 사용할 수 있는 ₩40,000-₩780,000 상당의 크레딧이.</span>
-      <span class="one">1</span>
+      <span class="one">¹</span>
       <a href="javascript:void(0)">&nbsp;iPhone 쇼핑하기<span class="material-icons">navigate_next</span></a>
     </div>
   </section>
+  <!-- 상품 소개 페이지 (1장) -->
   <section class="sales_presentation_one phone-pro">
     <div class="inner">
       <div class="copyright">
@@ -497,15 +503,116 @@
   </section>
   <section class="sales_presentation_one phone">
     <div class="inner">
-
+      <div class="copyright">
+        <h2>iPhone 14</h2>
+        <h3>두 가지 매력적인 사이즈.</h3>
+        <h3>이제 노랗게 물든 봄처럼.</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 아이폰 컬러 슬라이드 -->
+  <section class="today_color">
+    <div class="inner">
+      <h2>바로 오늘, 당신에게 어울리는 iPhone 14 컬러는?</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="javascript:void(0)">봄처럼 상큼한 Yellow</a></div>
+          <div class="swiper-slide"><a href="javascript:void(0)">은은한 느낌의 Purple</a></div>
+          <div class="swiper-slide"><a href="javascript:void(0)">티 없이 맑은 하늘의 Blue</a></div>
+          <div class="swiper-slide"><a href="javascript:void(0)">강렬하고 뜨거운 Red</a></div>
+          <div class="swiper-slide"><a href="javascript:void(0)">깨끗하고 깔끔한 Starlight</a></div>
+          <div class="swiper-slide"><a href="javascript:void(0)">고요하고 강한 Midnight</a></div>
+        </div>
+      </div>
+      <a href="javascript:void(0)">
+        <span class="material-icons">color_lens</span>
+      </a>
     </div>
   </section>
   <section class="sales_presentation_one watch">
     <div class="inner">
+      <div class="copyright">
+        <h2><img src="./images/sales_presentation_one-watch_logo.png" alt="watch_logo"></h2>
+        <h3>건강하게 앞서 나아가다.</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
       </div>
-      
     </div>
   </section>
-  <!-- 푸터 -->
+  <!-- 상품 소개 페이지 (2장) -->
+  <section class="sales_presentation_two">
+    <div class="wwdc23">
+      <div class="copyright">
+        <h2><img src="./images/sales_presentation_two-wwdc23-logo.jpg" alt="watch_logo"></h2>
+        <h3>Apple WWDC(세계개발자회의).</h3>
+        <h3>6월 5일-9일(태평양 연안 표준시), 온라인에서 만나요.</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ipad">
+      <div class="copyright">
+        <h2>iPad</h2>
+        <h3>쓰다. 그리다. 빠져들다.</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sales_presentation_two">
+    <div class="macbook_pro">
+      <div class="copyright">
+        <h2>MacBook Pro</h2>
+        <h3>막강한 성능의 M2 Pro 또는 M2 Max 칩 탑재</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="airpods_pro">
+      <div class="copyright">
+        <h2>AirPods Pro</h2>
+        <h3>최대 2배 강력해진</h3>
+        <h3>액티브 노이즈 캔슬링.²</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sales_presentation_two">
+    <div class="imac">
+      <div class="copyright">
+        <h2>iMac</h2>
+        <h3>이제 새롭게 만날 시간</h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="macbook_air">
+      <div class="copyright">
+        <h2>Macbook Air</h2>
+        <h3><img src="./images/sales_presentation_two-macbook_air-logo.png" alt="칩 로고"></h3>
+        <div class="product_link">
+          <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
+          <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- 푸터 -->
 </body>
 </html>

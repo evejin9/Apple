@@ -1,14 +1,5 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-})
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-})
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
+new Swiper('.today_color .swiper', {
+  direction: 'vertical',
+  loop: true,
+  autoplay: true,
 })
