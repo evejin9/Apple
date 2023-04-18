@@ -305,6 +305,19 @@ header .inner #shopping-bag .item .item__contents .inner.shop  li > ul li span {
   padding-right: 15px;
 }
 
+/* 배지 */
+header .badge {
+  position: fixed;
+  top: 105px;
+  right: 17px;
+}
+header .badge .badge_yellow {
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
 .section-content {
   background-color: #fbfbfd;
   margin-top: 44px;
@@ -748,4 +761,109 @@ header .inner #shopping-bag .item .item__contents .inner.shop  li > ul li span {
 #player {
   width: 100%;
   height: 100%;
+}
+
+/* 유튜브 커버 & 플로팅 */
+.youtube .youtube__cover {
+  background-image: url("../images/video_cover_pattern.png");
+  background-color: rgba(0, 0, 0, .3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.youtube .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.youtube .float1 {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+}
+.youtube .float2 {
+  position: absolute;
+  bottom: 145px;
+  left: 100px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+.youtube .float3 {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.yellow_promotion {
+  background-image: url("../images/yellow_promotion_bg.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(250, 250, 250);
+}
+.yellow_promotion .inner {
+  height: 680px;
+}
+
+.yellow_promotion .copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 120px;
+  right: 65px;
+}
+.yellow_promotion h2 {
+  color: #1d1d1f;
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+.yellow_promotion h4 {
+  color: #1d1d1f;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+.yellow_promotion .front1 {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  top: 100px;
+  left: 5px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
+}
+.yellow_promotion .front2 {
+  position: absolute;  
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  bottom: 162px;
+  right: 75px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
+}
+.yellow_promotion .back {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  bottom: 73px;
+  left: 120px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
+
+}
+.yellow_promotion .product_link {
+  position: absolute;
+  bottom: 100px;
+  right: 65px;
 }

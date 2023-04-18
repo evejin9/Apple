@@ -1,7 +1,4 @@
 const headerEl = document.querySelector('header');
-const menuEl = document.querySelector('header .menu');
-const searchMenuEl = document.querySelector('header .search-menu');
-const shopMenuEl = document.querySelector('header .shop-menu');
 const clickSearch = document.querySelector('header .item__name.search');
 const clickShop = document.querySelector('header .item__name.shop');
 
@@ -25,44 +22,31 @@ clickShop.addEventListener('blur', function () {
   headerEl.style.transition = '';
 } );
 
+// 배지 스크롤 효과 
+const badgeEl =  document.querySelector('header .badge');
 
-// item__name을 눌렀을 때 실행
-// item__name을 누르면 헤더의 배경색을 #161617 으로 바꾸기
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 500) {
+    gsap.to(badgeEl, 0.6, {
+      opacity: 0,
+      display: 'none'
+    })
+  } else {
+    gsap.to(badgeEl, 0.6, {
+      opacity: 1,
+      display: 'block'
+  });
+  }
+});
 
-// menuEl.addEventListener('mouseover', function () {
-//   headerEl.style.backgroundColor = '#161617';
-//   headerEl.style.transition = '.4s .4s';
-  
-// });
-// menuEl.addEventListener('mouseout', function () {
-//   headerEl.style.backgroundColor = 'rgba(22, 22, 23, .8)';
-//   headerEl.style.transition = '';
-// });
-
-// searchMenuEl.addEventListener('click', function () {
-//   headerEl.style.backgroundColor = '#161617';
-//   headerEl.style.transition = '.4s .4s';
-// });
-// searchMenuEl.addEventListener('mousedown', function () {
-//     headerEl.style.backgroundColor = 'rgba(22, 22, 23, .8)'
-//     headerEl.style.transition = '';
-//   });
-  
-//   shopMenuEl.addEventListener('click', function () {
-//     headerEl.style.backgroundColor = '#161617';
-//     headerEl.style.transition = '.4s .4s';
-//   });
-//   shopMenuEl.addEventListener('mousedown', function () {
-//     headerEl.style.backgroundColor = 'rgba(22, 22, 23, .8)'
-//     headerEl.style.transition = '';
-//   });
-
+// 오늘의 컬러는? 슬라이드
 new Swiper('.today_color .swiper', {
   direction: 'vertical',
   loop: true,
   autoplay: true,
 })
 
+// 애플 TV 슬라이드
 new Swiper('.apple_tv_contents .swiper', {
   direction: 'horizontal',
   loop: true,
@@ -81,4 +65,35 @@ new Swiper('.apple_tv_contents .swiper', {
     nextEl: '.apple_tv_contents .swiper-button-next',
     prevEl: '.apple_tv_contents .swiper-button-prev',
   },
+})
+
+// 플로팅 요소 애니메이션
+gsap.to('.float1', 1.5, {
+  deley: 0.5,
+  y: 25,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+})
+gsap.to('.float2', 2, {
+  deley: 1,
+  y: 15,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+})
+gsap.to('.float3', 1, {
+  deley: 1.5,
+  y: 20,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+})
+
+gsap.to('.front2', 1.5, {
+  deley: 1.5,
+  y: 10,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
 })
