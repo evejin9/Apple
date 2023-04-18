@@ -644,6 +644,11 @@ header .inner #shopping-bag .item .item__contents .inner.shop  li > ul li span {
   overflow: hidden;
   position: relative;
 }
+.apple_tv_contents .inner {
+  max-width: 2560px;
+  overflow: hidden;
+}
+
 .apple_tv_contents .swiper {
   /* background-color: #2997ff; */
   width: calc(980px * 3 + 20px * 2);
@@ -694,32 +699,32 @@ header .inner #shopping-bag .item .item__contents .inner.shop  li > ul li span {
 }
 .apple_tv_contents .swiper-pagination {
   position: absolute;
-  bottom: 98px;
+  bottom: 40px;
   z-index: 1;
 }
-.apple_tv_contents .swiper-paginetion .swiper-pagination-bullet {
+.apple_tv_contents .swiper-pagination .swiper-pagination-bullet {
   width: 13px;
   height: 13px;
 }
-.apple_tv_contents .swiper-paginetion .swiper-pagination-bullet-active {
-  /* background-color: #161617; */
+.apple_tv_contents .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #161617;
 }
 .apple_tv_contents .swiper-button-prev,
 .apple_tv_contents .swiper-button-next {
   /* background-color: #2997ff; */
-  width: 758px;
-  height: 570px;
-  top: 0;
+  width: 775px;
+  height: 553px;
+  top: 77px;
   color: transparent;
   z-index: 1;
 }
 .apple_tv_contents .swiper-button-prev {
   left: 50%;
-  margin-left: -1270px;
+  margin-left: -1279px;
 }
 .apple_tv_contents .swiper-button-next {
   right: 50%;
-  margin-right: -1264px;
+  margin-right: -1278px;
 }
 
 /* 유튜브 광고 */
