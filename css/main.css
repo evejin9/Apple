@@ -967,7 +967,7 @@ footer .footer-last .footer-copyright {
   justify-content: flex-start;
   position: relative;
 }
-footer .footer-last .footer-copyright span {
+footer .footer-last .footer-copyright span:nth-child(2) {
   margin-right: 30px;
 }
 footer .footer-last .footer-copyright .footer-menu-last {
