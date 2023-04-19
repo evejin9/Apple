@@ -25,16 +25,33 @@ clickShop.addEventListener('blur', function () {
 // 배지 스크롤 효과 
 const badgeEl =  document.querySelector('header .badge');
 
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, 0.6, {
+    scrollTo: 0
+  });
+});
+
 window.addEventListener('scroll', function () {
   if (window.scrollY > 500) {
     gsap.to(badgeEl, 0.6, {
       opacity: 0,
       display: 'none'
-    })
+    });
+
+    gsap.to(toTopEl, 0.6, {
+      opacity: 1,
+      x: 0
+    });
   } else {
     gsap.to(badgeEl, 0.6, {
       opacity: 1,
       display: 'block'
+  });
+
+  gsap.to(toTopEl, 0.6, {
+    opacity: 0,
+    x: 100
   });
   }
 });
@@ -102,11 +119,14 @@ gsap.to('.float3', 1, {
   ease: Power1.easeInOut
 })
 
-// gsap.to('.front2', 1.5, {
-//   deley: 1.5,
-//   y: 10,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: Power1.easeInOut
-// })
-
+// 스크롤 매직 사용
+const spyEls = document.querySelectorAll('.yellow_promotion.scroll-spy');
+spyEls.forEach(function (spyEls) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEls,
+      triggerHook: 0.8
+    })
+    .setClassToggle(spyEls, 'show')
+    .addTo(new ScrollMagic.Controller());
+})

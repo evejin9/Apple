@@ -34,6 +34,9 @@
   <link rel="stylesheet" href="./css/main.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js" integrity="sha512-WFeBxQtM/n6U8/Nd0Hz/Hq7n75NImbzM7Kc0y/4kE0kHnH1Be+nzm32RwbGoDsW1D9fjjPvI8LIWxLrZhxew/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -739,16 +742,16 @@
     </div>
   </section>
   <!-- 아이폰 14 Yellow 광고 배너 -->
-  <section class="yellow_promotion">
+  <section class="yellow_promotion scroll-spy">
     <div class="inner">
-      <div class="copyright">
+      <div class="copyright back-to-position to-left">
         <h2>iPhone 14</h2>
         <h4>나랑 노랑.</h4>
       </div>
-      <img src="./images/yellow_promotion_front1.jpg" alt="" class="front1">
-      <img src="./images/yellow_promotion_front2.jpg" alt="" class="front2">
-      <img src="./images/yellow_promotion_back.jpg" alt="" class="back">
-      <div class="product_link">
+      <img src="./images/yellow_promotion_front1.jpg" alt="" class="front1 back-to-position to-right">
+      <img src="./images/yellow_promotion_front2.jpg" alt="" class="front2 back-to-position to-left delay-1">
+      <img src="./images/yellow_promotion_back.jpg" alt="" class="back back-to-position to-right delay-2">
+      <div class="product_link back-to-position to-left delay-1">
         <a href="javascript:void{0}" class="hover one">더 알아보기<span class="material-icons">navigate_next</span></a>
         <a href="javascript:void{0}" class="hover two">구입하기<span class="material-icons">navigate_next</span></a>
       </div>
@@ -782,15 +785,129 @@
             </ul>
           </div>
           <div class="bottom-menu-column-section">
-            <h3>Apple 지갑</h3>
+            <h3 class="margin">Apple 지갑</h3>
             <ul>
               <li><a href="javascript:void(0)">지갑</a></li>
               <li><a href="javascript:void(0)">Apple Pay</a></li>
             </ul>
           </div>
         </div>
+        <div class="bottom-menu-column">
+          <div class="bottom-menu-column-section">
+            <h3>계정</h3>
+            <ul>
+              <li><a href="javascript:void(0)">Apple ID 관리</a></li>
+              <li><a href="javascript:void(0)">Apple Store 계정</a></li>
+              <li><a href="javascript:void(0)">iCloud.com</a></li>
+            </ul>
+          </div>
+          <div class="bottom-menu-column-section">
+            <h3 class="margin">엔터테인먼트</h3>
+            <ul>
+              <li><a href="javascript:void(0)">Apple One</a></li>
+              <li><a href="javascript:void(0)">Apple TV+</a></li>
+              <li><a href="javascript:void(0)">Apple Music</a></li>
+              <li><a href="javascript:void(0)">Apple Arcade</a></li>
+              <li><a href="javascript:void(0)">Apple Podcasts</a></li>
+              <li><a href="javascript:void(0)">Apple Books</a></li>
+              <li><a href="javascript:void(0)">App Store</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-menu-column">
+          <div class="bottom-menu-column-section">
+            <h3>Apple Store</h3>
+            <ul>
+              <li><a href="javascript:void(0)">매장 찾기</a></li>
+              <li><a href="javascript:void(0)">Genius Bar</a></li>
+              <li><a href="javascript:void(0)">Today at Apple</a></li>
+              <li><a href="javascript:void(0)">Apple 캠프</a></li>
+              <li><a href="javascript:void(0)">Apple Store 앱</a></li>
+              <li><a href="javascript:void(0)">인증 리퍼비쉬 제품</a></li>
+              <li><a href="javascript:void(0)">Apple Trade In</a></li>
+              <li><a href="javascript:void(0)">금융 혜택</a></li>
+              <li><a href="javascript:void(0)">주문 상태</a></li>
+              <li><a href="javascript:void(0)"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-menu-column">
+          <div class="bottom-menu-column-section">
+            <h3>비즈니스</h3>
+            <ul>
+              <li><a href="javascript:void(0)">Apple과 비즈니스</a></li>
+              <li><a href="javascript:void(0)">비즈니스를 위한 제품 쇼핑하기</a></li>
+            </ul>
+          </div>
+          <div class="bottom-menu-column-section">
+            <h3 class="margin">교육</h3>
+            <ul>
+              <li><a href="javascript:void(0)">Apple과 교육</a></li>
+              <li><a href="javascript:void(0)">초중고용 제품 쇼핑하기</a></li>
+              <li><a href="javascript:void(0)">대학 생활을 위한 제품 쇼핑하기</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-menu-column">
+          <div class="bottom-menu-column-section">
+            <h3>Apple의 가치관</h3>
+            <ul>
+              <li><a href="javascript:void(0)">손쉬운 사용</a></li>
+              <li><a href="javascript:void(0)">교육</a></li>
+              <li><a href="javascript:void(0)">환경</a></li>
+              <li><a href="javascript:void(0)">개인정보 보호</a></li>
+              <li><a href="javascript:void(0)">협력업체에 대한 책임</a></li>
+            </ul>
+          </div>
+          <div class="bottom-menu-column-section">
+            <h3 class="margin">Apple 정보</h3>
+            <ul>
+              <li><a href="javascript:void(0)">Newsroom</a></li>
+              <li><a href="javascript:void(0)">Apple 리더십</a></li>
+              <li><a href="javascript:void(0)">채용 안내</a></li>
+              <li><a href="javascript:void(0)">윤리 및 규정 준수</a></li>
+              <li><a href="javascript:void(0)">이벤트</a></li>
+              <li><a href="javascript:void(0)">일자리 창출</a></li>
+              <li><a href="javascript:void(0)">Apple 연락처</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
+
+      <section class="footer-last">
+        <div class="footer-shop">
+          <span>다양한 쇼핑 방법:</span>
+          <a href="javascript:void(0)">Apple Store를 방문</a>
+          <span>하거나, </span>
+          <a href="javascript:void(0)">리셀러</a>
+          <span>를 찾아보거나, 080-330-8877번으로 전화하세요.</span>
+        </div>
+        <div class="footer-copyright">
+          <span>Copyright © 2023 Apple Inc. 모든 권리 보유.</span>
+          <ul class="footer-menu-last">
+            <li>개인정보 처리방침 |</li>
+            <li>웹사이트 이용 약관 |</li>
+            <li>판매 및 환불 |</li>
+            <li>법적 고지 |</li>
+            <li>사이트 맵</li>
+          </ul>
+          <a href="javascript:void(0)" class="korea">대한민국</a>
+        </div>
+        <div class="info">
+          <span>사업자등록번호 : 120-81-84429 |</span>
+          <span>통신판매업신고번호 : 제 2011-서울강남-00810호 |</span>
+          <span>대표이사 : PETER DENWOOD |</span>
+          <span>주소 : 서울 특별시 강남구 영동대로 517 |</span>
+          <span>대표전화 : 02-6712-6700 |</span>
+          <span>팩스 : 02-6928-0000</span>
+        </div>
+      </section>
     </div>
   </footer>
+
+  <!-- 상단 올리기 버튼 -->
+  <div id="to-top">
+    <span class="material-icons">arrow_upward</span>
+  </div>
 </body>
 </html>
