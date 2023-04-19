@@ -47,7 +47,7 @@ new Swiper('.today_color .swiper', {
 })
 
 // 애플 TV 슬라이드
-new Swiper('.apple_tv_contents .swiper', {
+const appleTvSlide = new Swiper('.apple_tv_contents .swiper', {
   direction: 'horizontal',
   loop: true,
   autoplay: {
@@ -65,7 +65,19 @@ new Swiper('.apple_tv_contents .swiper', {
     nextEl: '.apple_tv_contents .swiper-button-next',
     prevEl: '.apple_tv_contents .swiper-button-prev',
   },
-})
+});
+
+// 애플 슬라이드 하단 버튼과 문구 애니메이션 효과
+appleTvSlide.on('slideChange', function () {
+  // console.log(this.slides[this.activeIndex]);
+  // const bottomEl = this.querySelectorAll('.into-bottom');
+  const prevEl = this.slides[this.activeIndex - 1].querySelector('.into-bottom');
+  prevEl.classList.remove('animate__fadeInUp');
+  const activeEl = this.slides[this.activeIndex].querySelector('.into-bottom');
+  activeEl.classList.add('animate__fadeInUp');
+  console.log(activeEl);
+  
+});
 
 // 플로팅 요소 애니메이션
 gsap.to('.float1', 1.5, {
@@ -90,10 +102,11 @@ gsap.to('.float3', 1, {
   ease: Power1.easeInOut
 })
 
-gsap.to('.front2', 1.5, {
-  deley: 1.5,
-  y: 10,
-  repeat: -1,
-  yoyo: true,
-  ease: Power1.easeInOut
-})
+// gsap.to('.front2', 1.5, {
+//   deley: 1.5,
+//   y: 10,
+//   repeat: -1,
+//   yoyo: true,
+//   ease: Power1.easeInOut
+// })
+

@@ -681,6 +681,9 @@ header .badge .badge_yellow {
   bottom: 70px;
   left: 50px;
 }
+.apple_tv_contents .swiper-slide .into-bottom .animate__animated.animate__fadeInUp{
+  animation: animate__fadeInUp;
+}
 .apple_tv_contents .swiper-slide .into-bottom .btn{
   width: 100px;
   height: 22px;
@@ -838,7 +841,7 @@ header .badge .badge_yellow {
   position: absolute;
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 10%;
   top: 100px;
   left: 5px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
@@ -847,7 +850,7 @@ header .badge .badge_yellow {
   position: absolute;  
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 10%;
   bottom: 162px;
   right: 75px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
@@ -856,7 +859,7 @@ header .badge .badge_yellow {
   position: absolute;
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 10%;
   bottom: 73px;
   left: 120px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
@@ -867,3 +870,40 @@ header .badge .badge_yellow {
   bottom: 100px;
   right: 65px;
 }
+.yellow_promotion .hover.one:hover {
+  text-decoration: underline;
+}
+.yellow_promotion .hover.two:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f5f5f7;
+}
+
+footer .inner {
+  display: flex;
+  flex-direction: column;
+}
+footer .footnote {
+  margin: 20px auto 10px;
+  font-size: 12px;
+}
+footer .footnote .footnote-1,
+footer .footnote .footnote-2 {
+  margin-bottom: 10px;
+}
+footer .bottom-menu {
+  width: 100%;
+  border-top: 1px solid #cac8c8;
+  padding: 20px 40px;
+}
+footer .bottom-menu .bottom-menu-column {
+  font-size: 12px;
+}
+footer .bottom-menu .bottom-menu-column .bottom-menu-column-section h3 {
+  font-weight: 800;
+  color: #1d1d1f;
+  margin: 0 20px 9.6px 0;
+}
+footer .bottom-menu .bottom-menu-column .bottom-menu-column-section ul {
